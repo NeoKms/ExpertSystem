@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0EF58940-DF03-42EB-BAE8-EA6B790BC5E7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Ne_kazino_vulkan</RootNamespace>
+    <AssemblyName>Ne_kazino_vulkan</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IKVM.Reflection, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IP\net45\IKVM.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython, Version=2.7.9.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IP\net45\IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Modules, Version=2.7.9.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IP\net45\IronPython.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic, Version=1.2.2.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IP\net45\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting, Version=1.2.2.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IP\net45\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database.Designer.cs">
+      <DependentUpon>Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fractoin_table.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fractoin_table.Designer.cs">
+      <DependentUpon>fractoin_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="grup_priz_table.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="grup_priz_table.Designer.cs">
+      <DependentUpon>grup_priz_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Map.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Map.Designer.cs">
+      <DependentUpon>Map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="one_vulkan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="one_vulkan.Designer.cs">
+      <DependentUpon>one_vulkan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="priznak_checkbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="priznak_checkbox.Designer.cs">
+      <DependentUpon>priznak_checkbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="priznak_table.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="priznak_table.Designer.cs">
+      <DependentUpon>priznak_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="priz_for_vulk_table.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="priz_for_vulk_table.Designer.cs">
+      <DependentUpon>priz_for_vulk_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="P_Maski.cs" />
+    <Compile Include="P_sisp_L.cs" />
+    <Compile Include="raspozn.cs" />
+    <Compile Include="raspozn_job.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raspozn_job.Designer.cs">
+      <DependentUpon>raspozn_job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="result_job.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="result_job.Designer.cs">
+      <DependentUpon>result_job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sootv_gr_pr_table.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sootv_gr_pr_table.Designer.cs">
+      <DependentUpon>sootv_gr_pr_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="table_vulk_gr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="table_vulk_gr.Designer.cs">
+      <DependentUpon>table_vulk_gr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vulkaniums.cs" />
+    <Compile Include="vulkans_table.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="vulkans_table.Designer.cs">
+      <DependentUpon>vulkans_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vulk_chackbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vulk_chackbox.Designer.cs">
+      <DependentUpon>Vulk_chackbox.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Database.resx">
+      <DependentUpon>Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fractoin_table.resx">
+      <DependentUpon>fractoin_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="grup_priz_table.resx">
+      <DependentUpon>grup_priz_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Map.resx">
+      <DependentUpon>Map.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="one_vulkan.resx">
+      <DependentUpon>one_vulkan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="priznak_checkbox.resx">
+      <DependentUpon>priznak_checkbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="priznak_table.resx">
+      <DependentUpon>priznak_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="priz_for_vulk_table.resx">
+      <DependentUpon>priz_for_vulk_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="raspozn_job.resx">
+      <DependentUpon>raspozn_job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="result_job.resx">
+      <DependentUpon>result_job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sootv_gr_pr_table.resx">
+      <DependentUpon>sootv_gr_pr_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="table_vulk_gr.resx">
+      <DependentUpon>table_vulk_gr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vulkans_table.resx">
+      <DependentUpon>vulkans_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vulk_chackbox.resx">
+      <DependentUpon>Vulk_chackbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LzoC0BwEAm4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\указатель-на-карте-png-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Без имени-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allMaps2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZpfZmBaidqo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZpfZmBaidqo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5ALW0ePG88M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allMaps2 %281%29.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
